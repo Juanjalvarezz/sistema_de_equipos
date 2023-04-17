@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trabajos</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+    <body>
+        <h1>Trabajos</h1>
+        <table>
+            <tr>
+                <th class="id"><h3>Id</h3></th>
+                <th class="fecha"><h3>Fecha de Inicio</h3></th>
+                <th class="fecha"><h3>Fecha de culminacion</h3></th>
+                <th class="pt"><h3>Personal Tecnico</h3></th>
+                <th class="reserva"><h3>Reserva</h3></th>
+                <th class="equipo"><h3>Equipo</h3></th> 
+                <th class="trabajo"><h3>Trabajo</h3></th>
+            </tr>
+            <% respuesta.forEach(r => { %>
+                <tr>
+                    <td><%= r.id_trabajo  %></td>
+                    <td><%= r.fecha_de_inicio.toLocaleDateString() %></td>
+                    <td><%= r.fecha_de_culminacion.toLocaleDateString() %></td>
+                    <td><%= r.id_pt  %></td>
+                    <td><%= r.id_reserva  %></td>
+                    <td><%= r.id_equipo  %></td>
+                    <td><%= r.trabajo  %></td>
+                </tr>
+            <% }) %>
+        </table>
+
+    </body>
+</html>

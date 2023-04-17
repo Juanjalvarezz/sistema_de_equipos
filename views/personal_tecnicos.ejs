@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Tecnico</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="icon" href="/image/LOGO-RIF-1.png" type="png" size=20px>
+    </head>
+   
+    <body>
+        <h1>Personal Tecnico</h1>
+        <table>
+            <tr>
+                <th class="id"><h3>Id</h3></th>
+                <th><h3>Cedula</h3></th>
+                <th class="nombre"><h3>Nombre y Apellido</h3></th>
+                <th><h3>Cargo</h3></th>
+                <th><h3>Usuario</h3></th>
+                <th><h3>Clave</h3></th>
+                <th><h3>Especialidad</h3></th>
+            </tr>
+            <% respuesta.forEach(r => { %>
+                <tr>
+                    <td><%= r.id_pt  %></td>
+                    <td><%= r.cedula %></td>
+                    <td><%= r.nombre_y_apellido %></td>
+                    <td><%= r.cargo %></td>
+                    <td><%= r.usuario  %></td>
+                    <td><%= r.clave  %></td>
+                    <td><%= r.especialidad  %></td>
+                </tr>
+            <% }) %>
+        </table>
+   
+    </body>
+</html>
