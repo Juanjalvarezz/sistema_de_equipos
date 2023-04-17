@@ -16,7 +16,7 @@ class usuariostesModelo {
           console.log(result)
           //iniciando
           if (result) {
-            jwt.sign ({usuario : username}, process.env.secreto, {}, function(err, token) {
+            jwt.sign ({roles: ["User"], usuario : username}, process.env.secreto, {}, function(err, token) {
             console.log (token);
               console.log (err);
               console.log ('Usuario y contrasena correctos');
